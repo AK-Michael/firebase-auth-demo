@@ -2,7 +2,7 @@
 
 A portfolio project demonstrating a complete client-side authentication flow built with React and Firebase Auth.
 
-**Live demo:** _(add your Vercel URL after deploy)_
+**Live demo:** https://firebase-auth-demo-ten.vercel.app
 
 ## Features
 
