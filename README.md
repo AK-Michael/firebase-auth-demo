@@ -82,7 +82,7 @@ gh repo create firebase-auth-demo --public --source=. --remote=origin --push
 Or create the repo manually on GitHub, then:
 
 ```bash
-git remote add origin https://github.com/YOUR_USERNAME/firebase-auth-demo.git
+git remote add origin https://github.com/AK-Michael/firebase-auth-demo.git
 git branch -M main
 git push -u origin main
 ```
