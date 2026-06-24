@@ -33,7 +33,6 @@ function New-AppIconBitmap([int]$size) {
 
   $cx = 16 * $s
   $shackleTop = 12 * $s
-  $shackleBottom = 14 * $s
   $shackleRadius = 5 * $s
 
   $shackle = New-Object Drawing.Drawing2D.GraphicsPath
@@ -76,19 +75,16 @@ $outputs = @{
   "icon-512.png"          = 512
   "icon-192.png"          = 192
   "apple-touch-icon.png"  = 180
-  "favicon-32.png"        = 32
   "favicon-16.png"        = 16
 }
+
+$icoBmp = New-AppIconBitmap 32
 
 foreach ($entry in $outputs.GetEnumerator()) {
   $bmp = New-AppIconBitmap $entry.Value
   Save-Png $bmp (Join-Path $publicDir $entry.Key)
   Write-Output ("{0} ({1}px)" -f $entry.Key, $entry.Value)
-  if ($entry.Key -eq "favicon-32.png") {
-    $icoBmp = $bmp
-  } else {
-    $bmp.Dispose()
-  }
+  $bmp.Dispose()
 }
 
 Save-Ico $icoBmp (Join-Path $publicDir "favicon.ico")

@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 .env
+scripts/_imgtmp/
 
 # Editor directories and files
 .vscode/*
