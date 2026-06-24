@@ -1,0 +1,19 @@
+.mobileBg {
+  composes: container from "../styles/auth-layout.module.css";
+}
+
+.nameRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .mobileBg {
+    background-image: url("/signup-bg.jpg");
+  }
+
+  .nameRow {
+    grid-template-columns: 1fr;
+  }
+}

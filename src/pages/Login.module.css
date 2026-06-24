@@ -1,0 +1,9 @@
+.mobileBg {
+  composes: container from "../styles/auth-layout.module.css";
+}
+
+@media (max-width: 768px) {
+  .mobileBg {
+    background-image: url("/login-bg.jpg");
+  }
+}
